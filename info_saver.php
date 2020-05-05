@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <p> haha </p>
+<?php
+$first_name = $_POST['first_name'];
+$last_name = $_POST['last_name'];
+$email = $_POST['email'];
+
+$link = "localhost";
+$username = "u673269877";
+$database = "u673269877_db";
+$password = "yilin940911";
+    
+//Connecting to database
+$connection = mysqli_connect($localhost,$username,$database,$password) or die('Error connecting to database server');
+
+//The insert query
+$query = "INSERT INTO email_list (first_name last_name email)" . "VALUES('$first_name','$last_name','$email')";
+  
+//Executing query
+msqli_query($connection, $query) or die('Error querying database');
+
+//Final feedback of success
+echo('Customer added.');
+    
+mysqli_close($connection);
+
+?>
+    </body>
+    </html>
