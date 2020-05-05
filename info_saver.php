@@ -3,6 +3,8 @@ $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $email = $_POST['email'];
 
+echo $first_name . "\n";
+
 $link = "localhost";
 $username = "u673269877_yilin";
 $database = "u673269877_db";
