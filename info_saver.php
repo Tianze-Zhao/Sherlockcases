@@ -20,7 +20,7 @@ $query = "INSERT INTO email_list (first_name last_name email)" . "VALUES('$first
   
         echo "Query written.";
 //Executing query
-msqli_query($connection, $query) or die('Error querying database');
+mysqli_query($connection, $query) or die('Error querying database');
 
 //Final feedback of success
 echo 'Customer added.';
