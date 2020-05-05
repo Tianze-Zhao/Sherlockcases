@@ -1,6 +1,3 @@
-<html>
-    <body>
-        <p> haha </p>
 <?php
 $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
@@ -28,5 +25,3 @@ echo 'Customer added.';
 mysqli_close($connection);
 
 ?>
-    </body>
-    </html>
