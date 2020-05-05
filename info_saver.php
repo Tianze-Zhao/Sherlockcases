@@ -16,7 +16,7 @@ $connection = mysqli_connect($link,$username,$password,$database) or die('Error 
 
         echo "Database connected";
 //The insert query
-$query = "INSERT INTO email_list (first_name last_name email)" . "VALUES('$first_name','$last_name','$email')";
+$query = "INSERT INTO email_list (first_name,last_name,email) " . "VALUES('$first_name','$last_name','$email')";
   
         echo "Query written.";
 //Executing query
