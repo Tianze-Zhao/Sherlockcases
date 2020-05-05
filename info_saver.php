@@ -12,7 +12,7 @@ $database = "u673269877_db";
 $password = "yilin940911";
     
 //Connecting to database
-$connection = mysqli_connect($localhost,$username,$database,$password) or die('Error connecting to database server');
+$connection = mysqli_connect($link,$username,$password,$database) or die('Error connecting to database server');
 
 //The insert query
 $query = "INSERT INTO email_list (first_name last_name email)" . "VALUES('$first_name','$last_name','$email')";
