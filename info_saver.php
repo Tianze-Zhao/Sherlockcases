@@ -7,7 +7,7 @@ $last_name = $_POST['last_name'];
 $email = $_POST['email'];
 
 $link = "localhost";
-$username = "u673269877";
+$username = "u673269877_yilin";
 $database = "u673269877_db";
 $password = "yilin940911";
     
