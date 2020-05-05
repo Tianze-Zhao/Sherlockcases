@@ -14,11 +14,11 @@ $password = "yilin940911";
 //Connecting to database
 $connection = mysqli_connect($link,$username,$password,$database) or die('Error connecting to database server');
 
-        echo "Database connected";
+        echo "Database connected.\n";
 //The insert query
-$query = "INSERT INTO email_list (first_name,last_name,email) " . "VALUES({$first_name},{$last_name},{$email})";
+$query = "INSERT INTO email_list (first_name, last_name, email) VALUES('$first_name','$last_name'','$email')";
   
-        echo "Query written.";
+        echo "Query written.\n";
 //Executing query
 mysqli_query($connection, $query) or die('Error querying database');
 
