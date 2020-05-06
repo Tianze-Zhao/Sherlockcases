@@ -1,0 +1,8 @@
+textarea#content{
+    height:300px;
+    width: 500px;
+}
+
+input#subject{
+    width:500px;
+}
