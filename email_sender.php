@@ -22,7 +22,6 @@ while($row = mysqli_fetch_array($result)){
 $from = 'tom940911@gmail.com';
 $subject = $POST_['subject'];
 $content = $POST_['content'];
-
 //Close connection
 mysqli_close($connection);
 
