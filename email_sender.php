@@ -1,10 +1,11 @@
 <?php
 //Connect to email_list table
-$server = "(localdb)\MSSQLLocalDB";
-$database = "email_list";
-
+$server = "localhost";
+$database = "u673269877_db";
+$username = 'u673269877_yilin';
+$password = 'yilin940911';
     
-$conn = mysqli_connect($server,'','',$database) or die('Error connecting to database server');
+$conn = mysqli_connect($server,$username,$password,$database) or die('Error connecting to database server');
 
 echo "Database connected.\n";
 
@@ -14,8 +15,7 @@ $result = mysqli_query($conn,$qry);
 while($row = mysqli_fetch_array($result)){
     if($row['first_name'] != '' && $row['last_name'] != '' && $row['email'] != '')
     echo $row['first_name'] . ' ' . $row['last_name'] . ' ' . $row['email'] . '<br/>';
-}
-
+};
 
 //Send customized emails
 $from = 'tom940911@gmail.com';
