@@ -22,8 +22,6 @@ $content = $POST_['content'];
 
 while($row = mysqli_fetch_array($result)){
     $to = $row['email'];
-    echo $subject;
-    echo $content;
     mail($to,$subject,$content,'From:'.$from) or die("error");
     echo 'Email sent to: ' . $to . '<br/>';
     
