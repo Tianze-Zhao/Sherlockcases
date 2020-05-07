@@ -1,11 +1,10 @@
 <?php
 //Connect to email_list table
-$server = "localhost";
-$username = "u673269877_yilin";
-$database = "u673269877_db";
-$password = "yilin940911";
+$server = "(localdb)\MSSQLLocalDB";
+$database = "email_list";
+
     
-$conn = mysqli_connect($server,$username,$password,$database) or die('Error connecting to database server');
+$conn = mysqli_connect($server,'','',$database) or die('Error connecting to database server');
 
 echo "Database connected.\n";
 
