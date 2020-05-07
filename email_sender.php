@@ -17,9 +17,9 @@ $result = mysqli_query($conn,$qry);
 //Send customized emails
 
 $from = 'yilin@sherlockcases.com';
-$subject = $POST_['subject'];
-$content = $POST_['content'];
-echo "a";
+$subject = $_POST['subject'];
+$content = $_POST['content'];
+
     echo $subject;
     echo $content;
 while($row = mysqli_fetch_array($result)){
