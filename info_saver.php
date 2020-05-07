@@ -3,10 +3,10 @@ $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $email = $_POST['email'];
 
-$server = "(localdb)\MSSQLLocalDB";
-$username = '';
-$database = "email_list";
-$password = '';
+$server = "localhost";
+$username = 'u673269877_yilin';
+$database = "u673269877_db";
+$password = 'yilin940911';
     
 //Connecting to database
 $connection = mysqli_connect($server,$username,$password,$database) or die('Error connecting to database server');
