@@ -24,8 +24,9 @@ mail("yilin1807@gmail.com","a","a","a");
 
 while($row = mysqli_fetch_array($result)){
     $to = $row['email'];
-    mail($to,$subject,$content,'From:'.$from);
+    mail($to,$subject,$content,'From:'.$from) or die("error");
     echo 'Email sent to: ' . $to . '<br/>';
+    
 };
 
 
