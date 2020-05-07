@@ -21,7 +21,7 @@ $subject = $POST_['subject'];
 $content = $POST_['content'];
 
 while($row = mysqli_fetch_array($result)){
-    if($row['first_name'] != '' && $row['last_name'] != '' && $row['email'] != '')
+    if($row['first_name'] != null && $row['last_name'] != null && $row['email'] != null)
     $to = $row['email'];
     mail($to,$subject,$content,'From:'.$from);
     echo 'Email sent to: ' . $to . '<br/>';
