@@ -16,12 +16,11 @@ $result = mysqli_query($conn,$qry);
 
 //Send customized emails
 
-$from = 'tom940911@gmail.com';
+$from = 'yilin@sherlockcases.com';
 $subject = $POST_['subject'];
 $content = $POST_['content'];
 
 while($row = mysqli_fetch_array($result)){
-    if($row['first_name'] != null && $row['last_name'] != null && $row['email'] != null)
     $to = $row['email'];
     mail($to,$subject,$content,'From:'.$from);
     echo 'Email sent to: ' . $to . '<br/>';
