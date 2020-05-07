@@ -20,10 +20,10 @@ $from = 'yilin@sherlockcases.com';
 $subject = $POST_['subject'];
 $content = $POST_['content'];
 
-mail("yilin1807@gmail.com","a","a","a");
-
 while($row = mysqli_fetch_array($result)){
     $to = $row['email'];
+    echo $subject;
+    echo $content;
     mail($to,$subject,$content,'From:'.$from) or die("error");
     echo 'Email sent to: ' . $to . '<br/>';
     
