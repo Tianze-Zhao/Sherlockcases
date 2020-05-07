@@ -13,6 +13,7 @@ echo "Database connected.\n";
 $qry = "SELECT * FROM email_list";
 $result = mysqli_query($conn,$qry);
 while($row = mysqli_fetch_array($result)){
+    if($row['first_name'] != '' && $row['last_name'] != '' && $row['email'] != '')
     echo $row['first_name'] . ' ' . $row['last_name'] . ' ' . $row['email'] . '<br/>';
 }
 
