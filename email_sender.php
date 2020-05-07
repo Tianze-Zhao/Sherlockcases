@@ -19,11 +19,11 @@ $result = mysqli_query($conn,$qry);
 $from = 'yilin@sherlockcases.com';
 $subject = $POST_['subject'];
 $content = $POST_['content'];
-
-while($row = mysqli_fetch_array($result)){
-    $to = $row['email'];
     echo $subject;
     echo $content;
+while($row = mysqli_fetch_array($result)){
+    $to = $row['email'];
+
     mail($to,$subject,$content,'From:'.$from) or die("error");
     echo 'Email sent to: ' . $to . '<br/>';
     
