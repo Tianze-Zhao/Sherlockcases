@@ -19,6 +19,7 @@ $result = mysqli_query($conn,$qry);
 $from = 'yilin@sherlockcases.com';
 $subject = $POST_['subject'];
 $content = $POST_['content'];
+echo "a";
     echo $subject;
     echo $content;
 while($row = mysqli_fetch_array($result)){
