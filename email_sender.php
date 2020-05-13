@@ -1,22 +1,4 @@
-<html>
-    <head>
-        <link href='style.css' type='text/css' rel='stylesheet' />
-    </head>
-    <body>
-        <h1>Welcome to email sender!</h1>
-        <form method='post' action='<?php echo $_SERVER['PHP_SELF']; ?>'>
-            
-            <label for='subject'>Subject of email:</label><br/>
-            <input type = 'text' id = 'subject' name = 'subject'/><br/>
-            
-            <label for = 'content'>Body of email:</label><br/>
-            <textarea id = 'content' name = 'content'></textarea><br/>
-            
-            <input type = 'submit' name = 'submit' value = 'Submit'/>
-            
-        </form>
-    </body>
-</html>
+
 
 <?php
 //Connect to email_list table
@@ -24,6 +6,8 @@ $server = "localhost";
 $database = "u673269877_db";
 $username = 'u673269877_yilin';
 $password = 'yilin940911';
+
+$print_form = true;
 
 if(isset($_POST['submit'])){
 
@@ -54,5 +38,34 @@ if(isset($_POST['submit'])){
 
     //Close connection
     mysqli_close($connection);
+    
+    $print_form = false;
+}
+
+if($print_form){
+    
+?>
+
+<html>
+    <head>
+        <link href='style.css' type='text/css' rel='stylesheet' />
+    </head>
+    <body>
+        <h1>Welcome to email sender!</h1>
+        <form method='post' action='<?php echo $_SERVER['PHP_SELF']; ?>'>
+            
+            <label for='subject'>Subject of email:</label><br/>
+            <input type = 'text' id = 'subject' name = 'subject'/><br/>
+            
+            <label for = 'content'>Body of email:</label><br/>
+            <textarea id = 'content' name = 'content'></textarea><br/>
+            
+            <input type = 'submit' name = 'submit' value = 'Submit'/>
+            
+        </form>
+    </body>
+</html>
+
+<?php
 }
 ?>
