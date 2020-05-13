@@ -1,3 +1,23 @@
+<html>
+    <head>
+        <link href='style.css' type='text/css' rel='stylesheet' />
+    </head>
+    <body>
+        <h1>Welcome to email sender!</h1>
+        <form method='post' action='<?php echo $_SERVER['PHP_SELF']; ?>'>
+            
+            <label for='subject'>Subject of email:</label><br/>
+            <input type = 'text' id = 'subject' name = 'subject'/><br/>
+            
+            <label for = 'content'>Body of email:</label><br/>
+            <textarea id = 'content' name = 'content'></textarea><br/>
+            
+            <input type = 'submit' value = 'Submit'/>
+            
+        </form>
+    </body>
+</html>
+
 <?php
 //Connect to email_list table
 $server = "localhost";
@@ -7,7 +27,7 @@ $password = 'yilin940911';
     
 $conn = mysqli_connect($server,$username,$password,$database) or die('Error connecting to database server');
 
-echo "Database connected.\n";
+echo "Database connected.<br/>";
 
 //Read all personal details
 
@@ -20,8 +40,6 @@ $from = 'yilin@sherlockcases.com';
 $subject = $_POST['subject'];
 $content = $_POST['content'];
 
-    echo $subject;
-    echo $content;
 while($row = mysqli_fetch_array($result)){
     $to = $row['email'];
 
@@ -29,7 +47,6 @@ while($row = mysqli_fetch_array($result)){
     echo 'Email sent to: ' . $to . '<br/>';
     
 };
-
 
 //Close connection
 mysqli_close($connection);
