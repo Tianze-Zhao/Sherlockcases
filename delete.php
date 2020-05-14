@@ -1,12 +1,8 @@
-<html>
-    <head>
-    
-    </head>
-    
-    <body>
+
         <p>Please select the email addresses to delete from the email list and click Remove</p>
 
-        <form method='post' action='<?php echo '$_SERVER['PHP_SELF']'; ?>'>
+        <form method='post' action="<?php echo $_SERVER['PHP_SELF']; ?>">
+
     <?php
         //Connect database
         $server = "localhost";
@@ -17,7 +13,7 @@
         echo "Database connected.<br/>";
 
         //Delete selected ids
-        if(isset($_POST['submit']){
+        if(isset($_POST['submit'])){
             foreach($_POST['todelete'] as $delete_id){
                 $query = 'DELETE FROM email_list WHERE id = $delete_id';
                 mysqli_query(connection,$query) or die("Error querying database");
@@ -35,13 +31,9 @@
             echo ''.$row['last_name'];
             echo ''.$row['email'];
             echo '<br/>';
-        }  
+        }
         mysqli_close($connection);
 
     ?>
         <input type='submit' name = 'submit' value='Remove'/>
-    </form>
-    </body>
-    
-</html>
-    
+        </form>
