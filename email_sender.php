@@ -1,18 +1,19 @@
 
 
 <?php
-//Connect to email_list table
-$server = "localhost";
-$database = "u673269877_db";
-$username = 'u673269877_yilin';
-$password = 'yilin940911';
 
+// By default form should be printed, unless submitted successfully
 $print_form = true;
 
+// Is it submitted?
 if(isset($_POST['submit'])){
 
     // Connect to database
-    $conn = mysqli_connect($server,$username,$password,$database) or die('Error connecting to database server');
+    $server = "localhost";
+    $database = "u673269877_db";
+    $username = 'u673269877_yilin';
+    $password = 'yilin940911';
+    $connection = mysqli_connect($server,$username,$password,$database) or die('Error connecting to database server');
 
     echo "Database connected.<br/>";
 
@@ -42,6 +43,8 @@ if(isset($_POST['submit'])){
     $print_form = false;
 }
 
+
+//Decide whether to print the form
 if($print_form){
     
 ?>
