@@ -19,12 +19,12 @@
                 mysqli_query($connection,$query) or die("Error querying database");
             }
             echo "Customer deleted.<br/>";
-
         }
 
         //Display form
         $query = "SELECT * FROM email_list";
         $result = mysqli_query($connection,$query);
+          //Each row of form
         while($row = mysqli_fetch_array($result)){
             echo '<input type="checkbox" value="'.$row['id'].'" name="todelete[]" />';
             echo $row['first_name'];
