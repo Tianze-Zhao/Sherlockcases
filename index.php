@@ -7,7 +7,7 @@
 
 <?php
 $file_name = $_FILES['icon']['name'];
-$target = 'icon' . $_FILES['icon']['name'];
+$target = 'icon/' . $_FILES['icon']['name'];
 move_uploaded_file($_FILES['icon']['tmp_name'],$target);
 
  ?>
